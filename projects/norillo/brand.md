@@ -16,7 +16,7 @@ silent error that ends up in an ad.
 | Product | 3D Sculpt Leggings + Training Band |
 | Market | Sweden |
 | Language — research | English |
-| Language — final copy | Swedish when specified |
+| Language — final copy | English. All output is English, see GENERAL-INSTRUCTION section 7 |
 | Product code (asset naming) | |
 
 ## Offer
