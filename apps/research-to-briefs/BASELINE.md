@@ -85,6 +85,23 @@ A sticky save bar shows save state, Start over (two clicks) and Save.
 | Image ads | Code, angle type, format, 3 headlines (8 words or fewer), the format's own blocks, CTA | Hooks, body, VO, production notes, price |
 | Long-form | Main idea, lowest point, failed fixes, bridge, mechanism, turning point, draft, 12-section brief | Hooks, VO, video buckets |
 
+## 3a. Research is saved once and used everywhere
+
+- **Research library**: Save research (in a task) or + Add research (Dashboard or in a task)
+  stores links, pasted research and the full analysis as a `scaling_sessions` row with
+  `status = "library"` (`src/lib/researchLibrary.ts`). Shared with the team, this brand only.
+  Deleting a task never deletes it; only Delete in the library does (second click).
+- **Dashboard**: a Saved research table. Click one for a pop-up with the common desire, counts,
+  angles, sources and the tasks using it, plus Use in new task, Add to open task, Rename, Delete.
+  The Dashboard hands the choice to Research to Briefs through sessionStorage.
+- **New task**: start with New research, or Use existing research (library or another task) and
+  go straight to Creative Production or Analysis, with no re-analysis.
+- **Research for this task** card on Research, Analysis and Creative Production: switch to saved
+  or another task's research (asks first if the task already has an analysis), Save research,
+  + Add research. The task records `brief_config.researchFrom` and copies the research in, so
+  work in a task never changes the saved one; Refresh from saved research pulls in updates.
+- Library rows never appear as tasks, in Storage or in History.
+
 ## 3b. Every format has its own shape
 
 `formatLayouts.ts` (next to this file; `src/lib/formatLayouts.ts` in the app) defines all 32 static formats (blocks) and all 36 video formats (body
@@ -194,6 +211,8 @@ product's verified page; if none is saved, Briefs asks for it before generating)
     task fresh before opening it, and never let the list hold the same task twice.
 17. Every static was forced into one shape (headline, subhead, callouts, CTA), so a testimonial's
     quote landed in callouts. Each format has its own blocks and each video format its own beats.
+18. Research lived only inside a task, so it was redone for every task and lost when a task was
+    deleted. Research is saved once in the library and used by any task.
 
 ## 10. How we work on it
 
