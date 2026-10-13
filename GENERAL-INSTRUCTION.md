@@ -39,6 +39,7 @@ system/master-concept.md     Module 1.1. framing, buckets, all 66 formats, namin
 system/evolve-*.md           video script execution. suggested, video only
 reference/metabolae/         the proven system. looked at, never forced
 projects/<brand>/            one folder per brand. brand.md, house-style.md, outputs, research, briefs
+apps/research-to-briefs/     baseline for building the Research to Briefs app. read before any rebuild
 ```
 
 ---
