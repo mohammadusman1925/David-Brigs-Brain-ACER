@@ -82,8 +82,27 @@ A sticky save bar shows save state, Start over (two clicks) and Save.
 | Type | Contains | Never contains |
 | --- | --- | --- |
 | Video scripts | Hooks (usually 3), body lines, CTA, VO and Visual Guide tables | Headlines, statics |
-| Image ads | Code, angle type, format, 3 headlines (8 words or fewer), subhead, callouts, CTA | Hooks, body, VO, production notes, price |
+| Image ads | Code, angle type, format, 3 headlines (8 words or fewer), the format's own blocks, CTA | Hooks, body, VO, production notes, price |
 | Long-form | Main idea, lowest point, failed fixes, bridge, mechanism, turning point, draft, 12-section brief | Hooks, VO, video buckets |
+
+## 3b. Every format has its own shape
+
+`formatLayouts.ts` (next to this file; `src/lib/formatLayouts.ts` in the app) defines all 32 static formats (blocks) and all 36 video formats (body
+beats). The mock-up's Format sample uses the same definitions.
+
+- Statics are written in their format's blocks only: Testimonial + Review is Headline (3 options),
+  Quote, Reviewer, Stars, Bridge, CTA; Checklist is Red X and Green check; Problem / Solution is
+  Problem and Solution. No callouts unless the format has them.
+- Video bodies run through their format's beats between the 3 hooks and the CTA: Three Reasons
+  Why is Setup, Reason 1, 2, 3, Wrap; Myth Busting is myth and truth pairs.
+- A Format sample card in Creative Production shows any format's blocks or beats before writing.
+- Customer-voice blocks (quotes, reviews, posts, interview answers) are written by the AI in the
+  customer's own words from the research, organic, with a believable name, age and place. They
+  are concept testimonials for client review: the ad stays clean, and the brief carries one
+  Concept note, "Swap in a customer review before launch".
+- The static brief's Format Content table is built by the app from the approved static. QA checks
+  every block of the format is filled and no block from another format slipped in. The editor
+  brief's clean VO shows the beats.
 
 ## 4. The video brief must be ready to send to an editor
 
@@ -173,6 +192,8 @@ product's verified page; if none is saved, Briefs asks for it before generating)
     brief opens with the Brief overview.
 16. A list copy of a task was used to reopen it, so saved analysis looked lost. Always load the
     task fresh before opening it, and never let the list hold the same task twice.
+17. Every static was forced into one shape (headline, subhead, callouts, CTA), so a testimonial's
+    quote landed in callouts. Each format has its own blocks and each video format its own beats.
 
 ## 10. How we work on it
 
