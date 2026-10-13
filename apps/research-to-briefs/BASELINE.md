@@ -18,12 +18,25 @@ research, then angles, then drafts they approve, then briefs a video editor, des
 can work from without asking questions. The final file must be complete, named correctly, and must
 not look AI-made.
 
-## 2. The flow, seven steps
+## 2. Tasks, then the seven steps
 
-1. **Research.** Links and uploaded files for one product. Analyze with Claude, ChatGPT or Gemini.
-   Each research is saved and listed in a Research dropdown with filters (All, This week, Last
-   week, This month) and "Name this research". "+ New research" starts a standalone research and
-   shows nothing from the old one.
+Work is organised in **tasks**. A task is one research (one `scaling_sessions` row) with its
+creative productions inside. The Tasks panel sits on the left of the page (a Task dropdown above
+the steps on narrow screens):
+
+- **+ New task** asks for a name first; Create task stays disabled until there is one. Start over
+  opens the same box. Every task is named so teams never mix up each other's work.
+- Tasks are numbered by age (Task 1 is the oldest), newest on top, each with name, date, the step
+  it was left on and who started it. Filters: All, This week, Last week, This month.
+- Clicking a task loads the latest saved copy (a teammate's changes included) and opens it at the
+  step it was left on. The open task expands to its 7 steps (done ones ticked, click to jump) and
+  its creative productions, with Rename and Delete (second click to confirm).
+- Only the current brand's tasks show.
+
+
+1. **Research.** The card at the top names the open task. Links and uploaded files for one
+   product. Analyze with Claude, ChatGPT or Gemini. A new task starts clean and shows nothing from
+   another task.
 2. **Analysis.** Common desire, evidence (desires, pains, frustrations, fears, with quotes word for
    word and counts) and 10 to 20 angle cards, each with concepts. More angles, regenerate one,
    more concepts.
@@ -122,6 +135,8 @@ product's verified page; if none is saved, Briefs asks for it before generating)
   `production` mirror for older readers; `skipItems` for unticked outputs.
 - Briefs in `scaling_sessions.briefs[]`, each with `productionId`, `kind`, `template`,
   `sourceItemId`, `fileName`.
+- Tasks: `title` is the task name; `brief_config.lastStep` (1 to 7) and `brief_config.owner` are
+  saved with it. Older sessions without a name show as "Untitled task, date".
 - `storedAt` on a draft or brief means moved to storage: hidden from working screens, listed in
   Storage, removed by Bring back.
 - Old briefs without `kind` are typed by their content, never by format name.
@@ -156,6 +171,8 @@ product's verified page; if none is saved, Briefs asks for it before generating)
     second copy of it.
 15. Image briefs had no strategy context (avatar, awareness, funnel, hypothesis, links). Every
     brief opens with the Brief overview.
+16. A list copy of a task was used to reopen it, so saved analysis looked lost. Always load the
+    task fresh before opening it, and never let the list hold the same task twice.
 
 ## 10. How we work on it
 

@@ -6,6 +6,8 @@ and the mock-up is updated in the same round as every change to this page.
 
 ## The flow
 
+0. **Tasks** (left panel): one task = one research with its productions. + New task needs a
+   name. Numbered by age, opens at the step it was left on (`brief_config.lastStep`).
 1. **Research**: links and uploaded files for one product. Analyze with Claude, ChatGPT or Gemini.
    Each research is one `scaling_sessions` row. The Research dropdown (filter: All, This week,
    Last week, This month; "Name this research") switches between them. "+ New research" saves
