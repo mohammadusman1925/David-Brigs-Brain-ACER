@@ -195,7 +195,14 @@ product's verified page; if none is saved, Briefs asks for it before generating)
 - Claude allows the longest answers (32000 tokens at high effort). Gemini gets an explicit output
   limit. Cut-off answers from any model raise a clear error.
 - Never invent claims. Claims come from the landing page and the research; anything else is
-  marked Approval needed. Quotes are word for word.
+  marked Approval needed. Quotes keep the customer's exact words, translated into English when
+  the source is in another language.
+- **English only, every brand, every market.** Every AI answer and every line of text on a
+  generated image is in English, even for a Swedish brand or a Swedish landing page. The rule
+  (`ENGLISH_ONLY`) is added in `chatComplete` in `src/lib/aiProviders.server.ts`, the one
+  function every text AI call goes through, and to both image routes. Product names, brand names
+  and prices stay exactly as written. Data saved before the rule stays as it was: re-run the
+  analysis or auto-fill to get it in English.
 
 ## 9. Mistakes already made. Do not repeat them.
 
@@ -233,6 +240,9 @@ product's verified page; if none is saved, Briefs asks for it before generating)
     production, a new task from saved research, and Analysis with another production open all
     showed nothing ticked, and the team had to pick everything again. Choices made once carry
     forward: one shortlist per task, copied into every new production and saved with research.
+21. The English rule lived only in Creative Studio's prompts, so a Swedish brand's auto-fill,
+    research and briefs came back in Swedish. Rules that apply to everything go in the one shared
+    AI function, not in each feature's prompts.
 
 ## 10. How we work on it
 

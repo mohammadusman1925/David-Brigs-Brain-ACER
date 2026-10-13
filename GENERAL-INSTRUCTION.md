@@ -192,8 +192,9 @@ Brands: heykeratin.com · garden-trend.store · sleeppods.se · norillo.se · Me
 Health Co. All separate clients. sleeppods.se and norillo.se sit under the same owner but are
 still separate brands.
 
-All output in English unless specified. For the Swedish brands, research and strategy in
-English; final ad copy in Swedish when asked.
+All output in English, for every brand and every market, Swedish brands included. Research,
+strategy, briefs and final ad copy are in English. Source material in another language is
+translated into English; product names, brand names and prices stay as written.
 
 ---
 

@@ -16,7 +16,7 @@ silent error that ends up in an ad.
 | Product |  |
 | Market | Sweden |
 | Language — research | English |
-| Language — final copy | Swedish when specified |
+| Language — final copy | English only |
 | Product code (asset naming) | |
 
 ## Offer
