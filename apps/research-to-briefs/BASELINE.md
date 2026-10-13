@@ -7,7 +7,7 @@ behave, and every mistake already made so it is not made again.
 - Live app: Swipe Intel, route `/scaling` (repo `mohammadusman1925/swipe-intel-pro`).
 - Approved design: the mock-up at https://claude.ai/artifact/FuHRvVAUmFyebvYQBoxRpE. It is the
   design source of truth. Its "What changed in the live app" log lists every round, newest first.
-- Detail on data storage and the rules learned so far: `rules-and-data.md` next to this file (copy of `docs/research-to-briefs.md` in the app repo).
+- Detail on data storage and the rules learned so far: `docs/research-to-briefs.md`.
 
 ---
 
@@ -96,15 +96,27 @@ A sticky save bar shows save state, Start over (two clicks) and Save.
   The Dashboard hands the choice to Research to Briefs through sessionStorage.
 - **New task**: start with New research, or Use existing research (library or another task) and
   go straight to Creative Production or Analysis, with no re-analysis.
-- **Research for this task** card on Research, Analysis and Creative Production: switch to saved
-  or another task's research (asks first if the task already has an analysis), Save research,
-  + Add research. The task records `brief_config.researchFrom` and copies the research in, so
-  work in a task never changes the saved one; Refresh from saved research pulls in updates.
+- **Research for this task** card on Research: its select reads "Now: <research> · N angles",
+  switches to saved or another task's research (asks first if the task already has an
+  analysis), Save research, + Add research. The task records `brief_config.researchFrom` and
+  copies the research in, so work in a task never changes the saved one; Refresh from saved
+  research pulls in updates.
+- On Analysis and Creative Production the research is one line: "Research: <name> · N angles",
+  Save research, Change. Change opens a pop-up that warns before it replaces anything.
+- Pickers list this product's research first; research saved for another product is grouped
+  under "Other products (check before using)".
+- **Choices carry over.** The angles ticked in Analysis are the task's shortlist
+  (`brief_config.shortlist`). Analysis always shows it, whichever production is open. Every new
+  production starts with it ticked, plus each angle's concept and format, and says so in a note;
+  unticking there changes that production only. Changing the shortlist updates the open
+  production only when it has no approved drafts. Save research stores the shortlist, and a new
+  task from that research starts with it. Research with no shortlist opens in Analysis, never
+  in Creative Production with nothing ticked. Older tasks use their first production's picks.
 - Library rows never appear as tasks, in Storage or in History.
 
 ## 3b. Every format has its own shape
 
-`formatLayouts.ts` (next to this file; `src/lib/formatLayouts.ts` in the app) defines all 32 static formats (blocks) and all 36 video formats (body
+`src/lib/formatLayouts.ts` defines all 32 static formats (blocks) and all 36 video formats (body
 beats). The mock-up's Format sample uses the same definitions.
 
 - Statics are written in their format's blocks only: Testimonial + Review is Headline (3 options),
@@ -217,6 +229,10 @@ product's verified page; if none is saved, Briefs asks for it before generating)
     out the open task, which is the research a new task most often reuses. Pickers are always
     clickable, say what to do when empty, and the open task's research is offered (marked
     "open now").
+20. The angles ticked in Analysis belonged to whichever production was open, so a new
+    production, a new task from saved research, and Analysis with another production open all
+    showed nothing ticked, and the team had to pick everything again. Choices made once carry
+    forward: one shortlist per task, copied into every new production and saved with research.
 
 ## 10. How we work on it
 
