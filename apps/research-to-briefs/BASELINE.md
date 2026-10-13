@@ -213,6 +213,10 @@ product's verified page; if none is saved, Briefs asks for it before generating)
     quote landed in callouts. Each format has its own blocks and each video format its own beats.
 18. Research lived only inside a task, so it was redone for every task and lost when a task was
     deleted. Research is saved once in the library and used by any task.
+19. The research pickers were greyed out when their list was empty, and the New task list left
+    out the open task, which is the research a new task most often reuses. Pickers are always
+    clickable, say what to do when empty, and the open task's research is offered (marked
+    "open now").
 
 ## 10. How we work on it
 
