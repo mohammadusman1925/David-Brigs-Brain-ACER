@@ -84,6 +84,20 @@ A sticky save bar shows save state, Start over (two clicks) and Save.
 - A brand adaptation shorter than 70% of the reference script is written again.
 - PDF table rows taller than the page split across pages. Word rows may split. Nothing is clipped.
 
+## 4b. Every brief opens with a Brief overview
+
+A table under the title, before the template's own sections, on every template (video, static,
+primary text, long-form, hook iteration). Built by the app from saved data, never invented;
+anything missing reads N/A, and QA flags any N/A except Ad inspo.
+
+Angle · Angle idea (concept use case and scenario) · Avatar · Problem (the angle's villain) ·
+Awareness stage · Funnel (Unaware and Problem Aware TOF, Solution and Product Aware MOF, Most
+Aware BOF) · Sophistication level (Schwartz 1 to 5 from Analysis, else estimated by the brief
+writer and marked so) · Angle type (the emotional angle: Transformation, Nostalgia, Relief...) ·
+Format and Bucket (from Creative Production) · Hypothesis (why we test this output) · Ad inspo
+(reference link, file name or "Pasted script", N/A when written from angles) · Landing page (our
+product's verified page; if none is saved, Briefs asks for it before generating).
+
 ## 5. Files
 
 - The headline, the list label, the page footer and the file name are all the naming set in
@@ -140,6 +154,8 @@ A sticky save bar shows save state, Start over (two clicks) and Save.
 13. Assumed a merge was live. Lovable needs Publish, then Update.
 14. Hid formats and counts the user could not find. Say where a control lives before adding a
     second copy of it.
+15. Image briefs had no strategy context (avatar, awareness, funnel, hypothesis, links). Every
+    brief opens with the Brief overview.
 
 ## 10. How we work on it
 
